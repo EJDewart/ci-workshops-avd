@@ -1,9 +1,9 @@
 Device,Test Name,Test Status,Message(s),Test description,Test category
-s1-brdr1,VerifyBGPPeerSession,failure,Peer: 172.16.1.16 VRF: default - Incorrect session state - Expected: Established Actual: Active - Peer: 172.16.1.18 VRF: default - Incorrect session state - Expected: Established Actual: Active,Verifies the session state of BGP peers.,BGP
+s1-brdr1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
 s1-brdr1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
 s1-brdr1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
-s1-brdr1,VerifyLLDPNeighbors,failure,Port: Ethernet2 Neighbor: s1-spine1.atd.lab Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet7 - Port: Ethernet3 Neighbor: s1-spine2.atd.lab Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet7,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
-s1-brdr1,VerifyReachability,failure,Host: 172.16.1.16 Source: 172.16.1.17 VRF: default - Packet loss detected - Transmitted: 1 Received: 0 - Host: 172.16.1.18 Source: 172.16.1.19 VRF: default - Packet loss detected - Transmitted: 1 Received: 0,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-brdr1,VerifyLLDPNeighbors,success,,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-brdr1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
 s1-brdr1,VerifyReachability,success,,Verifies reachability to BGP neighbors with an update source configured.,Connectivity
 s1-brdr1,VerifyEnvironmentCooling,skipped,VerifyEnvironmentCooling test is not supported on cEOSLab,Verifies the status of power supply fans and all fan trays.,Hardware
 s1-brdr1,VerifyEnvironmentPower,skipped,VerifyEnvironmentPower test is not supported on cEOSLab,Verifies the power supplies state and input voltage.,Hardware
@@ -25,7 +25,6 @@ s1-brdr1,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-brdr1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-brdr1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-brdr1,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-brdr1,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-brdr1,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-brdr1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-brdr1,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
@@ -56,7 +55,6 @@ s1-brdr2,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-brdr2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-brdr2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-brdr2,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-brdr2,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-brdr2,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-brdr2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-brdr2,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
@@ -87,7 +85,6 @@ s1-leaf1,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-leaf1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-leaf1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-leaf1,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-leaf1,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-leaf1,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-leaf1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-leaf1,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
@@ -118,7 +115,6 @@ s1-leaf2,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-leaf2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-leaf2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-leaf2,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-leaf2,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-leaf2,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-leaf2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-leaf2,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
@@ -149,7 +145,6 @@ s1-leaf3,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-leaf3,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-leaf3,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-leaf3,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-leaf3,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-leaf3,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-leaf3,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-leaf3,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
@@ -180,16 +175,15 @@ s1-leaf4,VerifyRoutingProtocolModel,success,,Verifies the configured routing pro
 s1-leaf4,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-leaf4,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-leaf4,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-leaf4,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-leaf4,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-leaf4,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-leaf4,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
 s1-leaf4,VerifyVxlanConfigSanity,success,,Verifies there are no VXLAN config-sanity inconsistencies.,VXLAN
-s1-spine1,VerifyBGPPeerSession,failure,Peer: 172.16.1.17 VRF: default - Incorrect session state - Expected: Established Actual: Active,Verifies the session state of BGP peers.,BGP
+s1-spine1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
 s1-spine1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
 s1-spine1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
-s1-spine1,VerifyLLDPNeighbors,failure,Port: Ethernet6 Neighbor: s1-brdr1.atd.lab Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
-s1-spine1,VerifyReachability,failure,Host: 172.16.1.17 Source: 172.16.1.16 VRF: default - Packet loss detected - Transmitted: 1 Received: 0,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-spine1,VerifyLLDPNeighbors,success,,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-spine1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
 s1-spine1,VerifyReachability,success,,Verifies reachability to BGP neighbors with an update source configured.,Connectivity
 s1-spine1,VerifyEnvironmentCooling,skipped,VerifyEnvironmentCooling test is not supported on cEOSLab,Verifies the status of power supply fans and all fan trays.,Hardware
 s1-spine1,VerifyEnvironmentPower,skipped,VerifyEnvironmentPower test is not supported on cEOSLab,Verifies the power supplies state and input voltage.,Hardware
@@ -206,15 +200,14 @@ s1-spine1,VerifyRoutingProtocolModel,success,,Verifies the configured routing pr
 s1-spine1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-spine1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-spine1,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-spine1,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-spine1,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-spine1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-spine1,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
-s1-spine2,VerifyBGPPeerSession,failure,Peer: 172.16.1.19 VRF: default - Incorrect session state - Expected: Established Actual: Active,Verifies the session state of BGP peers.,BGP
+s1-spine2,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
 s1-spine2,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
 s1-spine2,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
-s1-spine2,VerifyLLDPNeighbors,failure,Port: Ethernet6 Neighbor: s1-brdr1.atd.lab Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
-s1-spine2,VerifyReachability,failure,Host: 172.16.1.19 Source: 172.16.1.18 VRF: default - Packet loss detected - Transmitted: 1 Received: 0,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-spine2,VerifyLLDPNeighbors,success,,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-spine2,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
 s1-spine2,VerifyReachability,success,,Verifies reachability to BGP neighbors with an update source configured.,Connectivity
 s1-spine2,VerifyEnvironmentCooling,skipped,VerifyEnvironmentCooling test is not supported on cEOSLab,Verifies the status of power supply fans and all fan trays.,Hardware
 s1-spine2,VerifyEnvironmentPower,skipped,VerifyEnvironmentPower test is not supported on cEOSLab,Verifies the power supplies state and input voltage.,Hardware
@@ -231,7 +224,6 @@ s1-spine2,VerifyRoutingProtocolModel,success,,Verifies the configured routing pr
 s1-spine2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
 s1-spine2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
 s1-spine2,VerifyCoredump,success,,Verifies there are no core dump files.,System
-s1-spine2,VerifyFileSystemUtilization,failure,Mount point: overlay          60G   47G   14G  78% / - Higher disk space utilization - Expected: 75% Actual: 78% - Mount point: /dev/sda2        60G   47G   14G  78% /mnt/flash - Higher disk space utilization - Expected: 75% Actual: 78%,Verifies that no partition is utilizing more than 75% of its disk space.,System
 s1-spine2,VerifyMaintenance,success,,Verifies that the device is not currently under or entering maintenance.,System
 s1-spine2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
 s1-spine2,VerifyReloadCause,success,,Verifies the last reload cause of the device.,System
